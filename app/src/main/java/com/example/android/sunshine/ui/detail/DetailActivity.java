@@ -66,28 +66,6 @@ public class DetailActivity extends LifecycleActivity {
                 bindWeatherToUI(weatherEntry);
             }
         });
-
-//        AppExecutors.getInstance().diskIO().execute(()-> {
-//            try {
-//
-//                // Pretend this is the network loading data
-//                Thread.sleep(4000);
-//                Date today = SunshineDateUtils.getNormalizedUtcDateForToday();
-//                WeatherEntry pretendWeatherFromDatabase = new WeatherEntry(1, 210, today,88.0,99.0,71,1030, 74, 5);
-//                mViewModel.setWeather(pretendWeatherFromDatabase);
-//
-//                Thread.sleep(2000);
-//                pretendWeatherFromDatabase = new WeatherEntry(1, 952, today,50.0,60.0,46,1044, 70, 100);
-//                mViewModel.setWeather(pretendWeatherFromDatabase);
-//
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//        });
-        //InjectorUtils.provideRepository(this).initializeData();
-
-
-
     }
 
     private void bindWeatherToUI(WeatherEntry weatherEntry) {
