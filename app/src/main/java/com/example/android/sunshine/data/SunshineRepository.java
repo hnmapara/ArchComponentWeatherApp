@@ -22,6 +22,7 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.example.android.sunshine.AppExecutors;
+import com.example.android.sunshine.data.database.ListViewWeatherEntry;
 import com.example.android.sunshine.data.database.WeatherDao;
 import com.example.android.sunshine.data.database.WeatherEntry;
 import com.example.android.sunshine.data.network.WeatherNetworkDataSource;
@@ -130,7 +131,7 @@ public class SunshineRepository {
         return mWeatherDao.getWeatherByDate(date);
     }
 
-    public LiveData<List<WeatherEntry>> getCurrentWeatherForecasts() {
+    public LiveData<List<ListViewWeatherEntry>> getCurrentWeatherForecasts() {
         initializeData();
         Date today = SunshineDateUtils.getNormalizedUtcDateForToday();
         return mWeatherDao.getCurrentWeatherForecasts(today);

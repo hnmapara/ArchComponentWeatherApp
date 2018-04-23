@@ -33,5 +33,5 @@ public interface WeatherDao {
     * @return {@link LiveData} list of all {@link WeatherEntry} objects after date
     */
     @Query("SELECT * FROM weather WHERE date >= :date")
-    LiveData<List<WeatherEntry>> getCurrentWeatherForecasts(Date date);
+    LiveData<List<ListViewWeatherEntry>> getCurrentWeatherForecasts(Date date);
 }
